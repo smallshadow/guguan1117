@@ -1,4 +1,13 @@
-<!doctype html>
-<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#182a2b"><title>谷關工房 · 3D 場景瀏覽</title><link rel="stylesheet" href="style.css"><script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script></head>
-<body><aside><header><div class="eyebrow">GUGUAN WORKSHOP / 1111</div><h1>谷關工房</h1><p>3D 場景瀏覽</p></header><div class="scene-head"><span>模型場景</span><span id="count">—</span></div><nav id="scenes" aria-label="模型場景"></nav><footer>拖曳旋轉 · 滾輪縮放 · 右鍵平移<br>手機單指旋轉，雙指縮放與平移</footer></aside><main><div class="topbar"><div><span class="eyebrow">目前場景</span><h2 id="sceneName">正在載入模型…</h2></div><div class="actions"><label class="toggle"><input id="transparent" type="checkbox" disabled><span>透明模型</span></label><button id="reset" disabled>重設視角</button><button id="full" aria-label="全螢幕">⛶</button></div></div><div id="viewport" aria-label="可互動的三維模型"></div><div id="status" role="status">正在載入模型與場景，請稍候…</div><div class="caption">谷關工房_1111_家具設備修正.skp <span>可旋轉・可縮放</span></div></main><script type="module" src="app.js"></script></body></html>
+<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>谷關工房 1117｜3D 瀏覽</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#e9eff0;color:#19353b;font:16px system-ui,sans-serif;display:flex;flex-direction:column;height:100dvh}header{background:#19353b;color:white;padding:.8rem 1.2rem}h1{font-size:1.45rem;margin:.2rem 0}small{color:#b1ded7}section,nav{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}section{padding:.65rem}nav{padding-right:.5rem;border-right:1px solid #aebbbe} small{color:#b1ded7} button:focus-visible{outline:2px solid #245d56;outline-offset:2px}button,label{font:inherit;background:white;color:inherit;border:1px solid #b8c8ca;border-radius:.45rem;padding:.45rem .65rem;cursor:pointer}button[aria-pressed=true]{background:#245d56;color:white}#view{flex:1;position:relative;min-height:0;display:grid;place-items:center}canvas{position:absolute;inset:0;display:block;touch-action:none}#status{position:relative;background:#fff;padding:1rem;border-radius:.5rem}footer{padding:.45rem .7rem;font-size:.8rem}
+</style>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+<header><small>3D 建築模型</small><h1>谷關工房 1117</h1></header>
+<section aria-label="模型控制"><nav id="floors" aria-label="樓層" hidden style="display:none"></nav><nav id="parts" aria-label="構件"></nav><label><input type="checkbox" id="walls" disabled> 全模型半透明</label><button id="top" disabled>俯視</button><button id="reset" disabled>重設視角</button></section>
+<div id="view"><div id="status" role="status">正在載入模型…</div></div>
+<footer>拖曳旋轉 · 滾輪縮放 · 右鍵平移 · 手機可用雙指縮放及平移</footer>
+<script>if(location.protocol==="file:")document.getElementById("status").textContent="請用 GitHub Pages 或本機 HTTP 伺服器開啟（見 README）。";</script><script type="module" src="./app-1117-compact.mjs"></script></html>
+
+
 
